@@ -1,9 +1,11 @@
-var pdfList = require('./modPdf.js')
+var modPdf = require('./modPdf.js');
+var pdfDir = process.argv[2];
 
-var dir = process.argv[2];
-
-pdfList(dir, function(err, list){
-	list.forEach(function (file){
-	console.log(file);
-	});
+modPdf(pdfDir, function(err, list){
+    var pdflist = list;
+    if(err){
+	throw err;}
+   else{ 	
+	console.log(list);
+   }
 });
