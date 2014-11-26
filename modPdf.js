@@ -24,7 +24,7 @@ module.exports = function(pdfDir, callback){
 	    list.forEach(function(file){
 	       if(path.extname(file)=== "." + pdf){
 		data =  pdfutils(file, function(err, doc){
-                    this.push(doc.title);		    
+                   		    
                   });
 	       }
 	    });
